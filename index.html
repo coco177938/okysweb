@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OK影视 - 让世界更精彩</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="/css/all.min.css" />
+  <script>
+    function copyToClipboard(text) {
+      var tempInput = document.createElement("input");
+      tempInput.value = text;
+      document.body.appendChild(tempInput);
+      tempInput.select();
+      document.execCommand("copy");
+      document.body.removeChild(tempInput);
+      alert("已复制到剪贴板：" + text);
+    }
+  </script>
+</head>
+<body>
+  <!-- 粒子背景层 -->
+  <div id="particles-js"></div>
+
+  <header class="hero">
+    <div class="hero-content">
+      <h1>
+        <img src="img/okys.png" class="logo-icon" alt="OK影视LOGO" />
+  <span class="logo-text">OK影视</span>        
+      </h1>
+      <p>随时随地，畅享高清影视</p>
+
+      <a href="https://d.kstore.dev/download/8026/%E5%BD%B1%E8%A7%86.apk" class="btn-download" download>
+        <i class="fab fa-android"></i> 手机最新版
+      </a>
+
+      <br /><br />
+
+      <a href="https://d.kstore.dev/download/8026/%E5%BD%B1%E8%A7%86TV.apk" class="btn-download" download>
+        <i class="fas fa-tv"></i> 电视最新版
+      </a>
+      
+      <br /><br />
+      
+      <a href="https://cnb.cool/yangwencai/okys/-/git/raw/main/okys5.0.apk" class="btn-download" download>
+        <i class="fab fa-android"></i> 安卓系统五
+      </a>
+      
+      <br /><br />
+      
+      <a href="https://cnb.cool/yangwencai/okys/-/git/raw/main/okystv5.0.apk" class="btn-download" download>
+        <i class="fas fa-tv"></i> 安卓系统五
+      </a>
+      
+      <br /><br />
+      
+      <a href="https://d.kstore.dev/download/16758/OkysAndroid4.0.apk" class="btn-download" download>
+        <i class="fas fa-tv"></i> 安卓系统四
+      </a>
+      
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="features yahei">
+      <h2 class="dianbo-title">🎬 点播接口设置</h2>
+      <p>安装后请按照以下步骤完成设置：</p>
+      <ol>
+        <li>打开 APP 并进入 <strong>“设置”</strong> 页面。</li>
+        <li>找到 <strong>“点播”</strong> 选项，复制下方任意一个点播接口链接。</li>
+        <li>将链接粘贴到接口位置，点击确定即可。</li>
+      </ol>
+
+      <p><strong>主点播接口：</strong>
+        <button class="copy-btn" onclick="copyToClipboard('https://8026.kstore.space/文才')">
+          📋 点击复制
+        </button>
+      </p>
+
+      <p><strong>备用点播接口：</strong>
+        <button class="copy-btn" onclick="copyToClipboard('https://wencai.nyc.mn/jsm.json')">
+          📋 点击复制
+        </button>
+      </p>
+    </section>
+
+    <section class="contact">
+      <h2 class="lianxi">📩 联系我们</h2>
+      <p>如需帮助或有任何疑问，请联系技术支持团队。</p>
+      <p><strong>Email：</strong>
+        <a href="mailto:admin@wencai.nyc.mn" class="email-link">admin@wencai.nyc.mn</a>
+      </p>
+    </section>
+  </main>
+
+  <footer>
+<p class="footer-brand">© 2025–Present OK影视 | 让世界更精彩</p>
+  </footer>
+
+  <!-- ✅ 使用正确的 cdnjs 链接 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+
+  <!-- 粒子配置 -->
+  <script>
+  const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+
+const pcConfig = {
+  particles: {
+    number: { value: 120, density: { enable: true, value_area: 800 } }, // 数量更多
+    color: { value: ["#ffffff", "#4285F4", "#34A853", "#FBBC05", "#EA4335", "#ff00ff", "#00ffff"] }, // 增加荧光色
+    shape: { type: ["circle", "star", "triangle"] }, // 多种形状
+    opacity: { value: 0.7, random: true },
+    size: { value: 4, random: true },
+    line_linked: { enable: true, distance: 150, color: "#ffffff", opacity: 0.25, width: 1 },
+    move: { 
+      enable: true, 
+      speed: 5, 
+      direction: "none", 
+      random: true, 
+      straight: false, 
+      out_mode: "out", 
+      bounce: false 
+    }
+  },
+  interactivity: {
+    events: { 
+      onhover: { enable: true, mode: "repulse" }, // 鼠标悬停时粒子散开
+      onclick: { enable: true, mode: "push" }     // 点击时增加粒子
+    },
+    modes: { 
+      repulse: { distance: 200, duration: 0.4 },
+      push: { particles_nb: 6 }
+    }
+  },
+  retina_detect: true
+};
+
+const mobileConfig = {
+  particles: {
+    number: { value: 40, density: { enable: false } },
+    color: { value: ["#ffffff", "#4285F4", "#34A853", "#FBBC05", "#EA4335", "#ff00ff", "#00ffff"] }, // 增加荧光色
+    shape: { type: ["circle", "star", "triangle"] }, // ✅ 保留星星和三角形
+    opacity: { value: 0.8, random: true },
+    size: { value: 2.5, random: true },
+    line_linked: { enable: true },
+    move: { 
+      enable: true, 
+      speed: 3, 
+      direction: "none", 
+      random: true, 
+      straight: false, 
+      out_mode: "out" 
+    }
+  },
+  interactivity: { 
+    events: { 
+      onhover: { enable: false }, 
+      onclick: { enable: false } 
+    } 
+  },
+  retina_detect: true
+};
+
+// 根据设备选择配置
+particlesJS("particles-js", isMobile ? mobileConfig : pcConfig);
+
+
+
+
+  </script>
+</body>
+</html>
