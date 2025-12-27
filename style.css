@@ -1,14 +1,5 @@
 
 
-@font-face {
-  font-family: 'wen';
-  src: url('/webfonts/wen.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
-
-
 /* ✅ 粒子背景层覆盖全局 */
 #particles-js {
   position: fixed;
@@ -30,7 +21,7 @@ footer {
 
 /* ✅ 首页标题字体 */
 .hero-content h1 {
-  font-family: 'wen', '微软雅黑',cursive;
+  font-family: '微软雅黑',cursive;
   font-size: 4em;
   margin-bottom: 10px;
   color: white;
@@ -84,7 +75,7 @@ footer {
 
 /* ✅ 点播接口标题字体 */
 .dianbo-title {
-  font-family: 'wen', '微软雅黑', cursive;
+  font-family: '微软雅黑', cursive;
   font-size: 2.2em;
   color: #222;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
@@ -94,7 +85,7 @@ footer {
 
 /* ✅ 联系我们标题字体 */
 .lianxi {
-  font-family: 'wen', '微软雅黑', cursive;
+  font-family: '微软雅黑', cursive;
   font-size: 1.8em;
   color: #222;
 }
